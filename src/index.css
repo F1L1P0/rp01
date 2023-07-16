@@ -5,6 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 html {
   font-family: "Inter", sans-serif;
 }
@@ -90,3 +91,5 @@ input[type="file"] {
 .sketch-picker > div:nth-child(3) {
   display: none !important;
 }
+
+

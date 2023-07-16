@@ -19,7 +19,7 @@ function CustomBtn({ type, tittle, handleClick, customStyles }) {
     <button
       onClick={() => handleClick()}
       style={generateStyle(type)}
-      className={`px-2 py-1.5 flex-1 rounded-md ${customStyles}`}>
+      className={`px-3 py-2 flex-1 rounded-md ${customStyles}`}>
       {tittle}
     </button>
   )
