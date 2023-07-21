@@ -1,5 +1,5 @@
 import React from 'react'
-import { CustomBtn } from '.'
+import { CustomButton } from '.'
 
 function FilePicker({ file, setFile, readFile }) {
   return (
@@ -19,15 +19,15 @@ function FilePicker({ file, setFile, readFile }) {
         </p>
       </div>
       <div className="mt-4 flex flex-wrap gap-3">
-        <CustomBtn
+        <CustomButton
           type="outline"
-          tittle="Logo"
+          title="Logo"
           customStyles="text-xs"
           handleClick={() => readFile('logo')}
         />
-        <CustomBtn
+        <CustomButton
           type="filled"
-          tittle="Full"
+          title="Full"
           customStyles="text-xs"
           handleClick={() => readFile('full')}
         />

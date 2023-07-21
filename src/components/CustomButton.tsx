@@ -1,8 +1,8 @@
 import { useSnapshot } from 'valtio'
-import state from '../store'
+import state from '../store/index.js'
 import { getContrastingColor } from '../config/helpers.js'
 
-function CustomBtn({ type, tittle, handleClick, customStyles }) {
+function CustomButton({ type, title, handleClick, customStyles }) {
   const snap = useSnapshot(state)
   const generateStyle = (type) => {
     switch (type) {
@@ -23,12 +23,12 @@ function CustomBtn({ type, tittle, handleClick, customStyles }) {
   }
   return (
     <button
-      onClick={() => handleClick()}
+      onClick={handleClick}
       style={generateStyle(type)}
       className={`px-3 py-2 flex-1 rounded-md ${customStyles}`}>
-      {tittle}
+      {title}
     </button>
   )
 }
 
-export default CustomBtn
+export default CustomButton
