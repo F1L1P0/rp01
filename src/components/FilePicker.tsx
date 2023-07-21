@@ -1,7 +1,39 @@
 import React from 'react'
+import { CustomBtn } from '.'
 
-function FilePicker() {
-  return <div>FilePicker</div>
+function FilePicker({ file, setFile, readFile }) {
+  return (
+    <div className="filepicker-container">
+      <div className="flex-1 flex flex-col">
+        <input
+          id="file-upload"
+          type="file"
+          accept="image/*"
+          onChange={(e) => setFile(e.target.files[0])}
+        />
+        <label htmlFor="file-upload" className="filepicker-label">
+          Upload File
+        </label>
+        <p className="truncate mt-2 text-gray-500 text-xs">
+          {file === '' ? 'No file selected' : file.name}
+        </p>
+      </div>
+      <div className="mt-4 flex flex-wrap gap-3">
+        <CustomBtn
+          type="outline"
+          tittle="Logo"
+          customStyles="text-xs"
+          handleClick={() => readFile('logo')}
+        />
+        <CustomBtn
+          type="filled"
+          tittle="Full"
+          customStyles="text-xs"
+          handleClick={() => readFile('full')}
+        />
+      </div>
+    </div>
+  )
 }
 
 export default FilePicker

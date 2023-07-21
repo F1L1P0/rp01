@@ -10,7 +10,7 @@ function Tab({ tab, isFilterTab, isActiveTab, handleClick }) {
   return (
     <button
       key={tab.name}
-      className={`tab-bnt ${
+      className={`tab-button ${
         isFilterTab ? 'rounded-full glassmorphism' : 'rounded-4'
       }`}
       onClick={handleClick}>

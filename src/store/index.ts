@@ -5,7 +5,7 @@ const state: IState = proxy({
   intro: true,
   color: '#EFBD48',
   isLogoTexture: true,
-  isFullTextture: false,
+  isFullTexture: false,
   logoDecal: './threejs.png',
   fullDecal: './threejs.png',
 })
